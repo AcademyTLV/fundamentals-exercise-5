@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Exercise5</string>
+    <string name="search_image">search image</string>
+    <string name="start_searching">Start Searching Images..</string>
+    <string name="search_button_text">search</string>
+</resources>
