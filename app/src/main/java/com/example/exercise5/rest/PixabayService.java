@@ -11,22 +11,22 @@ import retrofit2.http.Query;
 public interface PixabayService {
 
     /* base search image url */
-    final String BASE_URL = "https://pixabay.com/api/";
+    String BASE_URL = "https://pixabay.com/api/";
 
     /* search image parameters */
-    final String IMAGE_TYPE = "image_type";
-    final String QUERY = "q";
-    final String PAGE = "page";
+    String IMAGE_TYPE = "image_type";
+    String QUERY = "q";
+    String PAGE = "page";
 
     /* api key */
-    final String apiKey = "7143795-63f8097bd68601f11b7e06188";
-    final String keyQuery= "?key=" + apiKey;
+    String apiKey = "7143795-63f8097bd68601f11b7e06188";
+    String keyQuery= "?key=" + apiKey;
 
     /* image_type parameters */
-    final String IMAGE_TYPE_ALL = "all";
-    final String IMAGE_TYPE_PHOTO = "photo";
-    final String IMAGE_TYPE_ILLUSTRATION = "illustration";
-    final String IMAGE_TYPE_VECTOR = "vector";
+    String IMAGE_TYPE_ALL = "all";
+    String IMAGE_TYPE_PHOTO = "photo";
+    String IMAGE_TYPE_ILLUSTRATION = "illustration";
+    String IMAGE_TYPE_VECTOR = "vector";
 
     @GET(keyQuery)
     Call<ImageSearchResult> searchImage(@Query(QUERY) String queryValue, @Query(IMAGE_TYPE) String imageType);

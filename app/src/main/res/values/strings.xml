@@ -4,4 +4,6 @@
     <string name="start_searching">Start Searching Images..</string>
     <string name="search_button_text">search</string>
     <string name="show_next_results">show next results</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="searching">Searching…</string>
 </resources>
