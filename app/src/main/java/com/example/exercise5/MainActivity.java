@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse (Call<ImageSearchResult> call, Response<ImageSearchResult> response) {
 
-                // check if call went through.
+                // check if call went through and update the UI accordingly.
                 if (response.code() == 200) {
                     hitsDescription.setText(response.body().getTotalHits() + " hits were found for " + searchEditText.getText().toString());
                     ArrayList<Hit> hits = (ArrayList<Hit>) response.body().getHits();
@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure (Call<ImageSearchResult> call, Throwable t) {
+                // HTTP call failed, show something to the user.
                 hitsDescription.setText("Something went wrong");
             }
         });
