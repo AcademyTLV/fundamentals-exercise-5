@@ -47,7 +47,7 @@ public class HitsAdapter extends RecyclerView.Adapter<HitsAdapter.HitViewHolder>
         View hitLayout;
         ImageView hitImageView;
 
-        public HitViewHolder (View itemView, ImageView imageView) {
+        HitViewHolder (View itemView, ImageView imageView) {
             super(itemView);
             hitLayout = itemView;
             hitImageView = imageView;

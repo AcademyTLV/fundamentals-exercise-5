@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private Button searchButton;
 
     // page number for interceptor
-    int pageNumber = 0;
+    private int pageNumber = 0;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
