@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                         .addQueryParameter(PixabayService.PAGE, String.valueOf(++pageNumber))
                         .build();
 
-                // Request customization: add request headers
                 Request.Builder requestBuilder = original.newBuilder()
                         .url(url);
 
