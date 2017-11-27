@@ -24,13 +24,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     // retrofit
-    Retrofit retrofit;
-    PixabayService service;
+    private Retrofit retrofit;
+    private PixabayService service;
 
     // views
-    EditText searchEditText;
-    RecyclerView hitsRecyclerView;
-    TextView hitsDescription;
+    private EditText searchEditText;
+    private RecyclerView hitsRecyclerView;
+    private TextView hitsDescription;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     public void searchImages (View view) {
 
         // let the user know something is happening
-        hitsDescription.setText("Searching...");
+        hitsDescription.setText(R.string.searching);
 
         // create the call
         Call<ImageSearchResult> imageSearchResultCall = service.searchImage(searchEditText.getText().toString(), PixabayService.IMAGE_TYPE_ALL);
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure (Call<ImageSearchResult> call, Throwable t) {
                 // HTTP call failed, show something to the user.
-                hitsDescription.setText("Something went wrong");
+                hitsDescription.setText(R.string.something_went_wrong);
             }
         });
     }
