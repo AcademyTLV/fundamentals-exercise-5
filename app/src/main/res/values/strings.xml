@@ -3,4 +3,5 @@
     <string name="search_image">search image</string>
     <string name="start_searching">Start Searching Images..</string>
     <string name="search_button_text">search</string>
+    <string name="show_next_results">show next results</string>
 </resources>

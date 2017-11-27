@@ -16,6 +16,7 @@ public interface PixabayService {
     /* search image parameters */
     final String IMAGE_TYPE = "image_type";
     final String QUERY = "q";
+    final String PAGE = "page";
 
     /* api key */
     final String apiKey = "7143795-63f8097bd68601f11b7e06188";
