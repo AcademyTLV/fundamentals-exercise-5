@@ -6,4 +6,6 @@
     <string name="show_next_results">show next results</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="searching">Searching…</string>
+    <string name="hits_found">%1$d hits were found for %2$s</string>
+    <string name="error_with_code">Something went wrong, error code: %1$d</string>
 </resources>

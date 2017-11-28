@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // check if call went through and update the UI accordingly.
                 if (response.code() == 200) {
-                    hitsDescription.setText(response.body().getTotalHits() + " hits were found for " + searchEditText.getText().toString());
+                    hitsDescription.setText(String.format(getString(R.string.hits_found), response.body().getTotalHits(), searchEditText.getText().toString()));
                     ArrayList<Hit> hits = (ArrayList<Hit>) response.body().getHits();
                     HitsAdapter hitsAdapter = new HitsAdapter(hits);
                     hitsRecyclerView.setAdapter(hitsAdapter);
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                         searchButton.setText(R.string.show_next_results);
                     }
                 } else {
-                    hitsDescription.setText("Something went wrong, error code: " + response.code());
+                    hitsDescription.setText(String.format(getString(R.string.error_with_code), response.code()));
                 }
 
             }
